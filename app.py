@@ -27,12 +27,12 @@ def hello():
     app.logger.info('Info')
     return 'Hello World!'
 
-@app.route('/contacts')
+@app.route('/accounts')
 def contacts():
     try:
         my_list = []
         if cur != None:
-            cur.execute("""SELECT name from salesforce.contact""")
+            cur.execute("""SELECT name from salesforce.Account""")
             rows = cur.fetchall()
             response = ''
             
